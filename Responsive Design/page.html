@@ -1,346 +1,372 @@
-﻿<!DOCTYPE HTML>
-<!DOCTYPE html PUBLIC "" ""><HTML lang="en"><HEAD><META content="IE=11.0000" 
-http-equiv="X-UA-Compatible">
-     
-<META charset="utf-8">     
-<META http-equiv="X-UA-Compatible" content="IE=edge">     
-<META name="viewport" content="width=device-width, initial-scale=1">     
-<TITLE>Responsive design presentation for NHS Choices</TITLE>     <LINK href="/responsive%20design/page_files/bootstrap.min.css" 
-rel="stylesheet">     <LINK href="/responsive%20design/page_files/styles.css" rel="stylesheet">   
-<META name="GENERATOR" content="MSHTML 11.00.9600.16521"></HEAD>   
-<BODY>
-<DIV class="col-md-3">
-<DIV class="affix hidden-print hidden-xs hidden-sm" role="complementary">
-<P class="logo text-center"><A href="/index.html"><IMG 
-alt="NHS Choices logo" src="/responsive%20design/page_files/choices-logo.gif"></A></P>
-<H1>Retrofitting NHS Choices</H1><NAV class="navbar navbar-default navbar-static" 
-id="sidenav" role="navigation">
-<UL class="nav nav-pills nav-stacked">
-  <LI class="active"><A href="/responsive%20design/page.html#intro">Introduction</A></LI>
-  <LI><A href="/responsive%20design/page.html#whatisit">What 
-  is responsive design?</A></LI>
-  <LI><A href="/responsive%20design/page.html#whydoit">Why do 
-  responsive design?</A></LI>
-  <LI><A href="/responsive%20design/page.html#whychoices">Why 
-  responsify NHS Choices?</A></LI>
-  <LI><A href="/responsive%20design/page.html#tenpc">10% 
-  time</A></LI>
-  <LI><A href="/responsive%20design/page.html#mytenpc">My 10% 
-  time idea</A></LI>
-  <LI><A href="/responsive%20design/page.html#solution">The 
-  solution</A></LI>
-  <LI><A href="/responsive%20design/page.html#how1">How it was 
-  done (part 1)</A></LI>
-  <LI><A href="/responsive%20design/page.html#how2">How it was 
-  done (part 2)</A></LI>
-  <LI><A href="/responsive%20design/page.html#how3">How it was 
-  done (part 3)</A></LI>
-  <LI><A href="/responsive%20design/page.html#results">The 
-  results</A></LI>
-  <LI><A 
-  href="/responsive%20design/page.html#caveats">Caveats</A></LI></UL></NAV></DIV></DIV>
-<DIV class="col-md-9">
-<DIV id="content" role="main" data-target="#sidenav" data-spy="scroll" 
-data-offset="20">
-<DIV class="info" id="intro">
-<H1>Introduction</H1>
-<P class="lead">2 Aspects to this presentation</P>
-<OL class="lead">
-  <LI>Primer in responsive design</LI>
-  <LI>My '10%' time project</LI></OL></DIV>
-<DIV class="info" id="whatisit">
-<H1>What is responsive design?</H1>
-<P class="lead">A design that will respond regardless of screen size, platform 
-and orientation<BR>  i.e. it should work on all things - monitors, smartphones, 
-tablets, tvs, etc</P>
-<P class="text-center"><IMG class="img-responsive" alt="devices" src="/responsive%20design/page_files/devices.png"></P></DIV>
-<DIV class="info" id="whydoit">
-<H1>Why do responsive design?</H1>
-<H2 class="smaller">Why bother?</H2>
-<UL>
-  <LI>Modern mobile devices are designed to display non-responsive websites 
-  effectively <SPAN class="glyphicon glyphicon-new-window" data-toggle="modal" 
-  data-target=".screenshot-desktop-modal"></SPAN>             
-  <LI>Users are used to seeing their favourite sites on a desktop so will expect 
-  the same on their mobile device - don't like change!</LI>
-  <LI>Takes more developer time/effort/cost</LI></UL>
-<H2 class="smaller">Pros</H2>
-<UL>
-  <LI>Usability - make it as simple and easy as possible for the user to view 
-  content with minimal interaction</LI>
-  <LI><A href="http://googlewebmastercentral.blogspot.co.uk/2012/06/recommendations-for-building-smartphone.html">Google 
-  recommends it</A> - having your desktop and mobile site on a single URL makes 
-  it easier 'for Google’s algorithms to assign the indexing properties to your 
-  content'               
-  <UL>
-    <LI>In the 'old' days having a mobile strategy was to have a separate site 
-    for mobile (e.g. m.nhs.uk) and for desktop. Having one single site means 
-    Google only has to index the one site.                 </LI></UL></LI>
-  <LI>Some sites don't look good when zoomed in - difficulties with scrolling 
-  (Google maps <SPAN class="glyphicon glyphicon-new-window" data-toggle="modal" 
-  data-target=".screenshot-desktop-map"></SPAN>), lots of scrolling with drop 
-  down menus <SPAN class="glyphicon glyphicon-new-window" data-toggle="modal" 
-  data-target=".screenshot-desktop-dropdown"></SPAN></LI></UL>
-<DIV tabindex="-1" class="modal fade screenshot-desktop-modal" role="dialog" 
-aria-hidden="true" aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive design presentation for NHS Choices</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="col-md-3">
+      <div class="affix hidden-print hidden-xs hidden-sm" role="complementary">
+        <p class="logo text-center"><a href="index.html"><img src="img/choices-logo.gif" alt="NHS Choices logo" /></a></p>
+        <h1>Retrofitting NHS Choices</h1>
+        <nav role="navigation" class="navbar navbar-default navbar-static" id="sidenav">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#intro">Introduction</a></li>
+            <li><a href="#whatisit">What is responsive design?</a></li>
+            <li><a href="#whydoit">Why do responsive design?</a></li>
+            <li><a href="#whychoices">Why responsify NHS Choices?</a></li>
+            <li><a href="#tenpc">10% time</a></li>
+            <li><a href="#mytenpc">My 10% time idea</a></li>
+            <li><a href="#solution">The solution</a></li>
+            <li><a href="#how1">How it was done (part 1)</a></li>
+            <li><a href="#how2">How it was done (part 2)</a></li>
+            <li><a href="#how3">How it was done (part 3)</a></li>
+            <li><a href="#results">The results</a></li>
+            <li><a href="#caveats">Caveats</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div id="content" data-offset="20" data-spy="scroll" data-target="#sidenav" role="main">
         
-<H4 class="modal-title" id="myModalLabel">NHS Choices pre 
-responsification</H4></DIV>
-<DIV class="modal-body">
-<DIV class="media"><IMG class="pull-left" alt="iphone screenshot of non responsive NHS Choices" 
-src="/responsive%20design/page_files/homepage-desktop.png">                     
-<DIV class="media-body">
-<P class="lead">The iPhone automatically rescales site to fit the screen, allows 
-user to double tap, pinch and zoom</P></DIV></DIV></DIV></DIV></DIV></DIV>
-<DIV tabindex="-1" class="modal fade screenshot-desktop-dropdown" role="dialog" 
-aria-hidden="true" aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
+        <div id="intro" class="info">
+          <h1>Introduction</h1>
+          <p class="lead">2 Aspects to this presentation</p>
+          <ol class="lead">
+            <li>Primer in responsive design</li>
+            <li>My '10%' time project</li>
+          </ol>
+        </div>
+
+        <div id="whatisit" class="info">
+          <h1>What is responsive design?</h1>
+            <p class="lead">A design that will respond regardless of screen size, platform and orientation<br />
+  i.e. it should work on all things - monitors, smartphones, tablets, tvs, etc</p>
+            <p class="text-center"><img src="img/devices.png" alt="devices" class="img-responsive" /></p>
+        </div>
+
+        <div id="whydoit" class="info">
+          <h1>Why do responsive design?</h1>
+          
+          <h2 class="smaller">Why bother?</h2>
+
+          <ul>
+            <li>Modern mobile devices are designed to display non-responsive websites effectively <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".screenshot-desktop-modal"></span>
+            <li>Users are used to seeing their favourite sites on a desktop so will expect the same on their mobile device - don't like change!</li>
+            <li>Takes more developer time/effort/cost</li>
+          </ul>
+          
+          <h2 class="smaller">Pros</h2>
+
+          <ul>
+            <li>Usability - make it as simple and easy as possible for the user to view content with minimal interaction</li>
+            <li><a href="http://googlewebmastercentral.blogspot.co.uk/2012/06/recommendations-for-building-smartphone.html">Google recommends it</a> - having your desktop and mobile site on a single URL makes it easier 'for Google’s algorithms to assign the indexing properties to your content'
+              <ul>
+                <li>In the 'old' days having a mobile strategy was to have a separate site for mobile (e.g. m.nhs.uk) and for desktop. Having one single site means Google only has to index the one site.
+                </li>
+              </ul>
+            </li>
+            <li>Some sites don't look good when zoomed in - difficulties with scrolling (Google maps <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".screenshot-desktop-map"></span>), lots of scrolling with drop down menus <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".screenshot-desktop-dropdown"></span></li>
+          </ul>
+
+          <div class="modal fade screenshot-desktop-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">NHS Choices pre responsification</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="media">
+                    <img src="img/homepage-desktop.png" alt="iphone screenshot of non responsive NHS Choices" class="pull-left" />
+                    <div class="media-body">
+                      <p class="lead">The iPhone automatically rescales site to fit the screen, allows user to double tap, pinch and zoom</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade screenshot-desktop-dropdown" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">NHS Choices mega menu!</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="media">
+                    <img src="img/guides-desktop-megamenu.png" alt="iphone screenshot of non responsive NHS Choices mega menu" class="pull-left" />
+                    <div class="media-body">
+                      <p class="lead">The mega menu on our pregnancy and baby guide fills the whole screen and is a bit overwhelming. Need to do lots of scrolling and is a poor user experience.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade screenshot-desktop-map" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">NHS Choices map view - map trap</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="media">
+                    <video id="btt" class="pull-left" width="320" height="480" controls>
+                      <source src="video/maptrap.mp4" />
+                      <source src="video/maptrap.webm" />
+                    </video>
+                    <div class="media-body">
+                      <p class="lead">If you zoom in on the page and then scroll over to view the map, if the map then fills the whole screen, you can't scroll to any other part of the page - you would be trapped in scrolling around on the map.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div id="whychoices" class="info">
+          <h1>Why responsify NHS Choices?</h1>
+          
+          <h2 class="smaller">The stats <small>(End of Nov 2013 and Mid Jan 2014, Source: Webtrends)</small></h2>
+
+          <ul>
+            <li>50.5 million visits to NHS Choices</li>
+            <li>22 million from a mobile phone (44% approx.) of which</li>
+            <li>15.9 million were to treatment and conditions (31% of all visits) of which</li>
+            <li>9.3 million from an iPhone (18.4% of all visits)</li>
+          </ul>
+          <p class="lead">That's a lot.</p>
+
+        </div>
+
+        <div id="tenpc" class="info">
+          <h1>10% time</h1>
+          <p class="lead">Last year, NHS Choices introduced the idea of 10% time.</p>
+          <p class="lead">Concept used at Google (they use 20%) whereby you would do your job for 80% of the time and the remaining 20% of the time you can work on anything else</p>
+          <p class="lead">As long as it advances Google in some way.</p>
+          <p class="lead">Gmail, Google Talk and Adsense all started off as 20% time projects.</p>
+        </div>
+
+        <div id="mytenpc" class="info">
+          <h1>My 10% time</h1>
+          <p class="lead">NHS Choices 10% time involved presenting an idea to the Choices 'dragons' for approval.</p>
+          <p class="lead">If successful, you could work on your project on a Friday afternoon for a set period of time</p>
+          <p class="lead">At the end of the time period, you would present your idea to all.</p>
+          <p class="lead">Based on our stats, my idea was to... </p>
+          <div class="alert alert-info">
+            <p class="lead"><strong>&quot;Optimise Health A-Z for small viewports&quot;</strong></p>
+          </div>
+          <p class="lead">Why Treatments and Conditions (Health A-Z)?<br />
+          Because this is the most visited area of the site so will affect the most number of users, hopefully for the better.</p>
+        </div>
+
+        <div id="solution" class="info">
+          <h1>The solution</h1>
+          <p class="lead">For a 'quick win', I worked out that I could make changes to just 2 files to optimise the whole of Health A-Z </p>
+          <ul>
+            <li>1 javascript file (choices.js)</li>
+            <li>1 css file (healthaz.css)</li>
+          </ul>
+          <p class="lead">Even better, these files can be patched easily without the need to do a build.</p>
+          <p class="lead">I didn't want to change any page templates which would be risky, nor did I want any changes to be made in content by the content team as that could potentially mean changing every page. There are lots of them.</p>
+        </div>
+
+        <div id="how1" class="info">
+          <h1>How it was done (part 1)</h1>
+          <p class="lead">Inject <strong>meta viewport</strong> element in the head using javascript <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".inject-head-code"></span></p>
+          <p class="lead"><code>&lt;meta name=“viewport” content=“width=device-width, initial-scale=1.0” /&gt;</code></p>
+          <h2>What is this?</h2>
+          <ul>
+            <li>It was developed by <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">Apple</a> for their mobile Safari to control layout on mobile browsers</li>
+            <li>iOS Safari and other mobile browsers have a viewport of 980px - the width of the viewing area on the screen</li>
+            <li>When a webpage loads, it squeezes the page to fit inside the viewport</li>
+            <li>The meta viewport tag allows you to override this</li>
+            <li>So, <code>content="width=device-width"</code> sets the viewport width to be equal to the width of the device's screen</li>
+            <li>On an iPhone 4, the width is 320px in portrait mode, and 480px in landscape mode <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".other-screen-res"></span></p>
+            <li>This allows us to use media queries and target specific widths</li>
+          </ul>
         
-<H4 class="modal-title" id="myModalLabel">NHS Choices mega menu!</H4></DIV>
-<DIV class="modal-body">
-<DIV class="media"><IMG class="pull-left" alt="iphone screenshot of non responsive NHS Choices mega menu" 
-src="/responsive%20design/page_files/guides-desktop-megamenu.png">                     
-<DIV class="media-body">
-<P class="lead">The mega menu on our pregnancy and baby guide fills the whole 
-screen and is a bit overwhelming. Need to do lots of scrolling and is a poor 
-user experience.</P></DIV></DIV></DIV></DIV></DIV></DIV>
-<DIV tabindex="-1" class="modal fade screenshot-desktop-map" role="dialog" 
-aria-hidden="true" aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
-        
-<H4 class="modal-title" id="myModalLabel">NHS Choices map view - map 
-trap</H4></DIV>
-<DIV class="modal-body">
-<DIV class="media"><VIDEO width="320" height="480" class="pull-left" id="btt" 
-controls=""><SOURCE src="video/maptrap.mp4">                       <SOURCE src="video/maptrap.webm"> 
-                    </VIDEO>                     
-<DIV class="media-body">
-<P class="lead">If you zoom in on the page and then scroll over to view the map, 
-if the map then fills the whole screen, you can't scroll to any other part of 
-the page - you would be trapped in scrolling around on the 
-map.</P></DIV></DIV></DIV></DIV></DIV></DIV></DIV>
-<DIV class="info" id="whychoices">
-<H1>Why responsify NHS Choices?</H1>
-<H2 class="smaller">The stats <SMALL>(End of Nov 2013 and Mid Jan 2014, Source: 
-Webtrends)</SMALL></H2>
-<UL>
-  <LI>50.5 million visits to NHS Choices</LI>
-  <LI>22 million from a mobile phone (44% approx.) of which</LI>
-  <LI>15.9 million were to treatment and conditions (31% of all visits) of 
-  which</LI>
-  <LI>9.3 million from an iPhone (18.4% of all visits)</LI></UL>
-<P class="lead">That's a lot.</P></DIV>
-<DIV class="info" id="tenpc">
-<H1>10% time</H1>
-<P class="lead">Last year, NHS Choices introduced the idea of 10% time.</P>
-<P class="lead">Concept used at Google (they use 20%) whereby you would do your 
-job for 80% of the time and the remaining 20% of the time you can work on 
-anything else</P>
-<P class="lead">As long as it advances Google in some way.</P>
-<P class="lead">Gmail, Google Talk and Adsense all started off as 20% time 
-projects.</P></DIV>
-<DIV class="info" id="mytenpc">
-<H1>My 10% time</H1>
-<P class="lead">NHS Choices 10% time involved presenting an idea to the Choices 
-'dragons' for approval.</P>
-<P class="lead">If successful, you could work on your project on a Friday 
-afternoon for a set period of time</P>
-<P class="lead">At the end of the time period, you would present your idea to 
-all.</P>
-<P class="lead">Based on our stats, my idea was to... </P>
-<DIV class="alert alert-info">
-<P class="lead"><STRONG>"Optimise Health A-Z for small 
-viewports"</STRONG></P></DIV>
-<P class="lead">Why Treatments and Conditions (Health A-Z)?<BR>          Because 
-this is the most visited area of the site so will affect the most number of 
-users, hopefully for the better.</P></DIV>
-<DIV class="info" id="solution">
-<H1>The solution</H1>
-<P class="lead">For a 'quick win', I worked out that I could make changes to 
-just 2 files to optimise the whole of Health A-Z </P>
-<UL>
-  <LI>1 javascript file (choices.js)</LI>
-  <LI>1 css file (healthaz.css)</LI></UL>
-<P class="lead">Even better, these files can be patched easily without the need 
-to do a build.</P>
-<P class="lead">I didn't want to change any page templates which would be risky, 
-nor did I want any changes to be made in content by the content team as that 
-could potentially mean changing every page. There are lots of them.</P></DIV>
-<DIV class="info" id="how1">
-<H1>How it was done (part 1)</H1>
-<P class="lead">Inject <STRONG>meta viewport</STRONG> element in the head using 
-javascript <SPAN class="glyphicon glyphicon-new-window" data-toggle="modal" 
-data-target=".inject-head-code"></SPAN></P>
-<P class="lead"><CODE>&lt;meta name=“viewport” content=“width=device-width, 
-initial-scale=1.0” /&gt;</CODE></P>
-<H2>What is this?</H2>
-<UL>
-  <LI>It was developed by <A href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">Apple</A> 
-  for their mobile Safari to control layout on mobile browsers</LI>
-  <LI>iOS Safari and other mobile browsers have a viewport of 980px - the width 
-  of the viewing area on the screen</LI>
-  <LI>When a webpage loads, it squeezes the page to fit inside the viewport</LI>
-  <LI>The meta viewport tag allows you to override this</LI>
-  <LI>So, <CODE>content="width=device-width"</CODE> sets the viewport width to 
-  be equal to the width of the device's screen</LI>
-  <LI>On an iPhone 4, the width is 320px in portrait mode, and 480px in 
-  landscape mode <SPAN class="glyphicon glyphicon-new-window" data-toggle="modal" 
-  data-target=".other-screen-res"></SPAN>
-  <P></P>
-  <LI>This allows us to use media queries and target specific widths</LI></UL>
-<DIV tabindex="-1" class="modal fade inject-head-code" role="dialog" 
-aria-hidden="true" aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
-        
-<H4 class="modal-title" id="myModalLabel">Inject meta viewport in to the 
-head</H4></DIV>
-<DIV class="modal-body">
-<P>Javascript:<BR><CODE>$('head').append('&lt;meta name="viewport" 
-content="width=device-width, initial-scale=1.0" 
-/&gt;');</CODE></P></DIV></DIV></DIV></DIV>
-<DIV tabindex="-1" class="modal fade other-screen-res" role="dialog" 
-aria-hidden="true" aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
-        
-<H4 class="modal-title" id="myModalLabel">Viewport widths for selective 
-devices</H4></DIV>
-<DIV class="modal-body">
-<TABLE class="table">
-  <TBODY>
-  <TR>
-    <TH>Device</TH>
-    <TH>Width px (landscape)</TH>
-    <TH>Width px (portrait)</TH></TR>
-  <TR>
-    <TD>iPhone 4</TD>
-    <TD>320</TD>
-    <TD>480</TD></TR>
-  <TR>
-    <TD>iPhone 5</TD>
-    <TD>320</TD>
-    <TD>568</TD></TR>
-  <TR>
-    <TD>iPad (all)</TD>
-    <TD>768</TD>
-    <TD>1024</TD></TR>
-  <TR>
-    <TD>Samsung Galaxy S3/S4</TD>
-    <TD>360</TD>
-    <TD>640</TD></TR>
-  <TR>
-    <TD>Google Nexus 5</TD>
-    <TD>360</TD>
-    <TD>598</TD></TR>
-  <TR>
-    <TD>Tesco Hudl</TD>
-    <TD>600</TD>
-    <TD>799</TD></TR>
-  <TR>
-    <TD>Kindle Fire HD 7</TD>
-    <TD>533</TD>
-    <TD>801</TD></TR>
-  <TR>
-    <TD>Kindle Fire HDX 7</TD>
-    <TD>600</TD>
-    <TD>902</TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV></DIV>
-<DIV class="info" id="how2">
-<H1>How it was done (part 2)</H1>
-<P class="lead">Use <STRONG>media queries</STRONG> to target smaller viewports 
-and override/create new styling</P>
-<P class="lead"><CODE>@media (max-width:640px) 
-{<BR>&nbsp;&nbsp;...<BR>}</CODE></P>
-<H2>What is this?</H2>
-<UL>
-  <LI>It is a <ABBR title="World Wide Web Consortium">W3C</ABBR> recommended 
-  standard and was added in the <ABBR 
-  title="Cascading Style Sheets Level 3">CSS3</ABBR> specification</LI>
-  <LI>Allows you to target specific viewport widths, as well as other things 
-  such as height, orientation, aspect ratio, resolution</LI></UL></DIV>
-<DIV class="info" id="how3">
-<H1>How it was done (part 3)</H1>
-<P class="lead">A sprinkling of javascript</P>
-<UL>
-  <LI>To read/write a session cookie to let the user choose to view the desktop 
-  version if they prefer via an injected link <SPAN class="glyphicon glyphicon-new-window" 
-  data-toggle="modal" data-target=".code-cookie"></SPAN></LI>
-  <LI>To change the main top navigation menu <SPAN class="glyphicon glyphicon-new-window" 
-  data-toggle="modal" data-target=".code-topnav"></SPAN></LI>
-  <LI>To change the footer menus <SPAN class="glyphicon glyphicon-new-window" 
-  data-toggle="modal" data-target=".code-footernav"></SPAN></LI>
-  <LI>To write a new carousel for the homepage <SPAN class="glyphicon glyphicon-new-window" 
-  data-toggle="modal" data-target=".code-carousel"></SPAN></LI>
-  <LI>To move content around <SPAN class="glyphicon glyphicon-new-window" 
-  data-toggle="modal" data-target=".code-movecontent"></SPAN></LI>
-  <LI>Back to top link <SPAN class="glyphicon glyphicon-new-window" data-toggle="modal" 
-  data-target=".code-btt"></SPAN></LI>
-  <LI>Other collapsible content, such as comments and panels</LI></UL>
-<DIV tabindex="-1" class="modal fade code-cookie" role="dialog" aria-hidden="true" 
-aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog modal-lg">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
-        
-<H4 class="modal-title" id="myModalLabel">Cookie javascript</H4></DIV>
-<DIV class="modal-body">
-<DIV class="media"><IMG class="pull-left" alt="desktop link injected by javascript" 
-src="/responsive%20design/page_files/homepage-injected-link.png">                     
-<DIV class="media-body">
-<P><CODE>                          var desktopLink = '&lt;p 
-class="go-desktop"&gt;$lt;a href="#" class="mobile-nothanks"&gt;Desktop 
-site&lt;/a&gt;&lt;/p&gt;';<BR>                          
-&nbsp;&nbsp;$(".wrap").prepend(desktopLink);<BR><BR>                          if 
-(!sCookie) {<BR>                          &nbsp;&nbsp;$.cookie("mobile.display", 
-"true", {path: '/'});<BR>                          }                         
-</CODE>                       </P>
-<P>Inject the desktop link and then write a cookie for the mobile view.<BR>      
-                If the use clicks on the view desktop link, then write a cookie 
-saying not to display mobile version and reload the page.</P>
-<P><CODE>                          $(".mobile-nothanks").click(function(e) {<BR> 
-                         &nbsp;&nbsp;e.preventDefault();<BR>                     
-     &nbsp;&nbsp;$.cookie("mobile.nodisplay", "true", {path: '/'});<BR>          
-                &nbsp;&nbsp;location.reload(true);<BR>                          
-});                         </CODE>                       </P>
-<P>Do a check at the beginning to see if mobile cookie exists and if so, do the 
-magic... </P>
-<P><CODE>                          if (!sCookie) {<BR>                          
-&nbsp;&nbsp;...<BR>                          }                         </CODE>   
-                    </P></DIV></DIV></DIV></DIV></DIV></DIV>
-<DIV tabindex="-1" class="modal fade code-topnav" role="dialog" aria-hidden="true" 
-aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog modal-lg">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
-        
-<H4 class="modal-title" id="myModalLabel">Top navigation code</H4></DIV>
-<DIV class="modal-body">
-<DIV class="media"><VIDEO width="320" height="480" class="pull-left" id="topnav" 
-controls=""><SOURCE src="video/topnav.mp4">                       <SOURCE src="video/topnav.webm"> 
-                    </VIDEO>                     
-<DIV class="media-body">
-<P>Inject menu link and 'graphic' into the header, and along with some CSS 
-hiding and javascript slide toggling, show and hide the main top level 
-navigation links</P>
-<P>
-<PRE>function fChangeMainNav() {
-  var mobileNav = '&lt;div class="mobile-nav"&gt;&lt;span class="mobile-menu"&gt;MENU&lt;/span&gt; &lt;a href="#mobile-nav"&gt;&lt;span class="mobile-bar"&gt;&lt;/span&gt;&lt;span class="mobile-bar"&gt;&lt;/span&gt;&lt;span class="mobile-bar"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;',
+          <div class="modal fade inject-head-code" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Inject meta viewport in to the head</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Javascript:<br />
+                    <code>$('head').append('&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;');</code></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade other-screen-res" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Viewport widths for selective devices</h4>
+                </div>
+                <div class="modal-body">
+                  
+                  <table class="table">
+                    <tr>
+                      <th>Device</th>
+                      <th>Width px (landscape)</th>
+                      <th>Width px (portrait)</th>
+                    </tr>
+                    <tr>
+                      <td>iPhone 4</td>
+                      <td>320</td>
+                      <td>480</td>
+                    </tr>
+                    <tr>
+                      <td>iPhone 5</td>
+                      <td>320</td>
+                      <td>568</td>
+                    </tr>
+                    <tr>
+                      <td>iPad (all)</td>
+                      <td>768</td>
+                      <td>1024</td>
+                    </tr>
+                    <tr>
+                      <td>Samsung Galaxy S3/S4</td>
+                      <td>360</td>
+                      <td>640</td>
+                    </tr>
+                    <tr>
+                      <td>Google Nexus 5</td>
+                      <td>360</td>
+                      <td>598</td>
+                    </tr>
+                    <tr>
+                      <td>Tesco Hudl</td>
+                      <td>600</td>
+                      <td>799</td>
+                    </tr>
+                    <tr>
+                      <td>Kindle Fire HD 7</td>
+                      <td>533</td>
+                      <td>801</td>
+                    </tr>
+                    <tr>
+                      <td>Kindle Fire HDX 7</td>
+                      <td>600</td>
+                      <td>902</td>
+                    </tr>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="how2" class="info">
+          <h1>How it was done (part 2)</h1>
+          <p class="lead">Use <strong>media queries</strong> to target smaller viewports and override/create new styling</p>
+          <p class="lead"><code>@media (max-width:640px) {<br />&nbsp;&nbsp;...<br />}</code></p>
+          <h2>What is this?</h2>
+          <ul>
+            <li>It is a <abbr title="World Wide Web Consortium">W3C</abbr> recommended standard and was added in the <abbr title="Cascading Style Sheets Level 3">CSS3</abbr> specification</li>
+            <li>Allows you to target specific viewport widths, as well as other things such as height, orientation, aspect ratio, resolution</li>
+          </ul>
+        </div>
+
+        <div id="how3" class="info">
+          <h1>How it was done (part 3)</h1>
+          <p class="lead">A sprinkling of javascript</p>
+          <ul>
+            <li>To read/write a session cookie to let the user choose to view the desktop version if they prefer via an injected link <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".code-cookie"></span></li>
+            <li>To change the main top navigation menu <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".code-topnav"></span></li>
+            <li>To change the footer menus <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".code-footernav"></span></li>
+            <li>To write a new carousel for the homepage <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".code-carousel"></span></li>
+            <li>To move content around <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".code-movecontent"></span></li>
+            <li>Back to top link <span class="glyphicon glyphicon-new-window" data-toggle="modal" data-target=".code-btt"></span></li>
+            <li>Other collapsible content, such as comments and panels</li>
+          </ul>
+          
+
+          <div class="modal fade code-cookie" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Cookie javascript</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="media">
+                    <img src="img/homepage-injected-link.png" alt="desktop link injected by javascript" class="pull-left" />
+                    <div class="media-body">
+                      <p>
+                        <code>
+                          var desktopLink = '&lt;p class="go-desktop"&gt;$lt;a href="#" class="mobile-nothanks"&gt;Desktop site&lt;/a&gt;&lt;/p&gt;';<br />
+                          &nbsp;&nbsp;$(".wrap").prepend(desktopLink);<br /><br />
+                          if (!sCookie) {<br />
+                          &nbsp;&nbsp;$.cookie("mobile.display", "true", {path: '/'});<br />
+                          }
+                        </code>
+                      </p>
+                      <p>Inject the desktop link and then write a cookie for the mobile view.<br />
+                      If the use clicks on the view desktop link, then write a cookie saying not to display mobile version and reload the page.</p>
+                      
+                      <p>
+                        <code>
+                          $(".mobile-nothanks").click(function(e) {<br />
+                          &nbsp;&nbsp;e.preventDefault();<br />
+                          &nbsp;&nbsp;$.cookie("mobile.nodisplay", "true", {path: '/'});<br />
+                          &nbsp;&nbsp;location.reload(true);<br />
+                          });
+                        </code>
+                      </p>
+                      <p>Do a check at the beginning to see if mobile cookie exists and if so, do the magic... </p>
+                      <p>
+                        <code>
+                          if (!sCookie) {<br />
+                          &nbsp;&nbsp;...</br />
+                          }
+                        </code>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade code-topnav" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Top navigation code</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="media">
+                    <video id="topnav" class="pull-left" width="320" height="480" controls>
+                      <source src="video/topnav.mp4" />
+                      <source src="video/topnav.webm" />
+                    </video>
+                    <div class="media-body">
+                      <p>Inject menu link and 'graphic' into the header, and along with some CSS hiding and javascript slide toggling, show and hide the main top level navigation links</p>
+                      <p>
+<pre>
+function fChangeMainNav() {
+  var mobileNav = '&lt;div class="mobile-nav"&gt;&lt;span class="mobile-menu"&gt;MENU&lt;/span&gt; &lt;a href="#mobile-nav"&gt;&lt;span class="mobile-bar"&gt;&lt;/span&gt;&lt;span class="mobile-bar"&gt;&lt;/span&gt;&lt;span class="mobile-bar">&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;',
   btn = $('.mobile-nav');
 
   $(".searchbar").prepend(mobileNav);
@@ -351,36 +377,42 @@ navigation links</P>
     menu.slideToggle();
   });
 }
-</PRE>
-<P></P></DIV></DIV></DIV></DIV></DIV></DIV>
-<DIV tabindex="-1" class="modal fade code-footernav" role="dialog" aria-hidden="true" 
-aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog modal-lg">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
-        
-<H4 class="modal-title" id="myModalLabel">Footer links code</H4></DIV>
-<DIV class="modal-body">
-<DIV class="media"><VIDEO width="320" height="480" class="pull-left" id="footernav" 
-controls=""><SOURCE src="video/footer.mp4">                       <SOURCE src="video/footer.webm"> 
-                    </VIDEO>                     
-<DIV class="media-body">
-<P>Categorise the footer links and collapse to save space.<BR>Inject so arrows 
-for styling.</P>
-<P>
-<PRE>function fFooter() {
+</pre>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade code-footernav" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Footer links code</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="media">
+                    <video id="footernav" class="pull-left" width="320" height="480" controls>
+                      <source src="video/footer.mp4" />
+                      <source src="video/footer.webm" />
+                    </video>
+                    <div class="media-body">
+                      <p>Categorise the footer links and collapse to save space.<br />Inject so arrows for styling.</p>
+                      <p>
+<pre>
+function fFooter() {
   var footerHeaders = $(".footer-tab-content h2"),
-      rightArrow = $('
-<DIV>').html("►").text(),
-      downArrow = $('
-<DIV>').html("▼").text(),
-      btp = $('<A class="back-to-top" href="/responsive%20design/page.html#">Back to top</A>'),
+      rightArrow = $('<div />').html("&#9658;").text(),
+      downArrow = $('<div />').html("&#9660;").text(),
+      btp = $('<a href="#" class="back-to-top">Back to top</a>'),
       offset = 250,
       duration = 300;
 
   $(".footer-tab-content ul.info, .mobile .footer .language-intro ").addClass("hidden");
-  $(footerHeaders).addClass("show").append(" ►");
+  $(footerHeaders).addClass("show").append(" &#9658;");
 
   $(".footer-tab-content h2.show").click(function() {
   $(this).toggleClass("hide");
@@ -396,25 +428,33 @@ for styling.</P>
     $(this).html(function() { return $(this).html().replace(downArrow,rightArrow); });
   }
 });
-</DIV></DIV></PRE>
-<P></P></DIV></DIV></DIV></DIV></DIV></DIV>
-<DIV tabindex="-1" class="modal fade code-carousel" role="dialog" aria-hidden="true" 
-aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog modal-lg">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
-        
-<H4 class="modal-title" id="myModalLabel">New homepage carousel code</H4></DIV>
-<DIV class="modal-body">
-<DIV class="media"><VIDEO width="320" height="480" class="pull-left" id="carousel" 
-controls=""><SOURCE src="video/homepagecarousel.mp4">                       
-<SOURCE src="video/homepagecarousel.webm">                     </VIDEO>          
-           
-<DIV class="media-body">
-<P>Create a new carousel for mobile, based on the existing HTML.</P>
-<P>
-<PRE>function carouselResponsive() {
+</pre>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade code-carousel" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">New homepage carousel code</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="media">
+                    <video id="carousel" class="pull-left" width="320" height="480" controls>
+                      <source src="video/homepagecarousel.mp4" />
+                      <source src="video/homepagecarousel.webm" />
+                    </video>
+                    <div class="media-body">
+                      <p>Create a new carousel for mobile, based on the existing HTML.</p>
+                      <p>
+<pre>
+function carouselResponsive() {
   var $active = $('.features .feature-current');
   
   if ( $active.length == 0 ) $active = $('.features div.feature-wrap:last');
@@ -429,49 +469,61 @@ controls=""><SOURCE src="video/homepagecarousel.mp4">
     $active.removeClass('feature-current');
   });
 }
-</PRE>
-<P></P></DIV></DIV></DIV></DIV></DIV></DIV>
-<DIV tabindex="-1" class="modal fade code-movecontent" role="dialog" 
-aria-hidden="true" aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog modal-lg">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
+</pre>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-<H4 class="modal-title" id="myModalLabel">Moving content</H4></DIV>
-<DIV class="modal-body">
-<DIV class="media"><IMG class="pull-left" alt="moving content around" src="/responsive%20design/page_files/arthritis.png"> 
-                    
-<DIV class="media-body">
-<P>Lots of appending, prepending, afters and before to move content around based 
-on requests by the product owners.</P>
-<P><CODE>                          $(tabsNav).prepend("&lt;h2&gt;Other 
-sections&lt;/h2&gt;");<BR><BR>                          $(".temp-a 
-.healthaz-header").append($(".temp-a .healthaz-content 
-.two-sm.last").next("h2"));<BR><BR>                          
-$(".review-dates:not(.video-panel 
-.review-dates)").after($(".tabs-nav"));<BR><BR>                          
-$(".comments-wrap").before($(".healthaz-content .social-sharing"));              
-           </CODE>                       
-</P></DIV></DIV></DIV></DIV></DIV></DIV>
-<DIV tabindex="-1" class="modal fade code-btt" role="dialog" aria-hidden="true" 
-aria-labelledby="myLargeModalLabel">
-<DIV class="modal-dialog modal-lg">
-<DIV class="modal-content">
-<DIV class="modal-header"><BUTTON class="close" type="button" data-dismiss="modal"><SPAN 
-aria-hidden="true">×</SPAN><SPAN class="sr-only">Close</SPAN></BUTTON>           
-        
-<H4 class="modal-title" id="myModalLabel">Back to top link</H4></DIV>
-<DIV class="modal-body">
-<DIV class="media"><VIDEO width="320" height="480" class="pull-left" id="btt" 
-controls=""><SOURCE src="video/btt.mp4">                       <SOURCE src="video/btt.webm"> 
-                    </VIDEO>                     
-<DIV class="media-body">
-<P>Inject back to top link as user starts to scroll. Considered useful if the 
-page has lots of content, which most of our pages do.</P>
-<P>
-<PRE>$(window).scroll(function() {
-  if ($(this).scrollTop() &gt; offset) {
+          <div class="modal fade code-movecontent" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Moving content</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="media">
+                    <img src="img/arthritis.png" alt="moving content around" class="pull-left" />
+                    <div class="media-body">
+                      <p>Lots of appending, prepending, afters and before to move content around based on requests by the product owners.</p>
+                      <p>
+                        <code>
+                          $(tabsNav).prepend("&lt;h2&gt;Other sections&lt;/h2&gt;");<br /><br />
+                          $(".temp-a .healthaz-header").append($(".temp-a .healthaz-content .two-sm.last").next("h2"));<br /><br />
+                          $(".review-dates:not(.video-panel .review-dates)").after($(".tabs-nav"));<br /><br />
+                          $(".comments-wrap").before($(".healthaz-content .social-sharing"));
+                        </code>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade code-btt" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Back to top link</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="media">
+                    <video id="btt" class="pull-left" width="320" height="480" controls>
+                      <source src="video/btt.mp4" />
+                      <source src="video/btt.webm" />
+                    </video>
+                    <div class="media-body">
+                      <p>Inject back to top link as user starts to scroll. Considered useful if the page has lots of content, which most of our pages do.</p>
+                      <p>
+<pre>
+$(window).scroll(function() {
+  if ($(this).scrollTop() > offset) {
     $('.back-to-top').fadeIn(duration);
   } else {
     $('.back-to-top').fadeOut(duration);
@@ -483,31 +535,40 @@ $('.back-to-top').click(function(event) {
   $('html, body').animate({scrollTop: 0}, 500);
   return false;
 })
-</PRE>
-<P></P></DIV></DIV></DIV></DIV></DIV></DIV></DIV>
-<DIV class="info" id="results">
-<H1>The results</H1>
-<P class="lead">A beautiful responsive (ish) website!</P>
-<P>Actually, it is not a truly responsive website</P>
-<P>Remember, I only promised that it was <A class="internallink" href="/responsive%20design/page.html#mytenpc">'Optimised 
-for small viewports"</A></P>
-<P>And I only said I'd do it for Health A-Z!</P></DIV>
-<DIV class="info" id="caveats">
-<H1>Caveats</H1>
-<P class="lead">It's not perfect.</P>
-<P class="lead">It should only be regarded as a short term fix because it is not 
-the most efficient and can be done much better from the ground up.</P>
-<P class="lead">It doesn't respond well if you continuously resize your window 
-on the desktop because of the javascript that runs at load time.</P>
-<P class="lead">It is a hack but it does seem to work and hopefully will benefit 
-the increasing number of mobile users.</P></DIV></DIV></DIV>
-<SCRIPT src="/responsive%20design/page_files/jquery.min.js"></SCRIPT>
-     
-<SCRIPT src="/responsive%20design/page_files/bootstrap.min.js"></SCRIPT>
-     
-<SCRIPT src="/responsive%20design/page_files/scripts.js"></SCRIPT>
-     
-<SCRIPT>
+</pre>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="results" class="info">
+          <h1>The results</h1>
+          <p class="lead">A beautiful responsive (ish) website!</p>
+          <p>Actually, it is not a truly responsive website</p>
+          <p>Remember, I only promised that it was <a href="#mytenpc" class="internallink">'Optimised for small viewports"</a></p>
+          <p>And I only said I'd do it for Health A-Z!</p>
+        </div>
+
+        <div id="caveats" class="info">
+          <h1>Caveats</h1>
+          <p class="lead">It's not perfect.</p>
+          <p class="lead">It should only be regarded as a short term fix because it is not the most efficient and can be done much better from the ground up.</p>
+          <p class="lead">It doesn't respond well if you continuously resize your window on the desktop because of the javascript that runs at load time.</p>
+          <p class="lead">It is a hack but it does seem to work and hopefully will benefit the increasing number of mobile users.</p>
+        </div>
+
+      </div>
+    
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
@@ -517,5 +578,6 @@ the increasing number of mobile users.</P></DIV></DIV></DIV>
 
         ga('create', 'UA-53559956-1', 'auto');
         ga('send', 'pageview');
-    </SCRIPT>
-   </BODY></HTML>
+    </script>
+  </body>
+</html>
