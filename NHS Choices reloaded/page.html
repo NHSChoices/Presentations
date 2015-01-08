@@ -1,0 +1,234 @@
+<!-- Notes
+
+Optional tags - http://www.w3.org/html/wg/drafts/html/master/syntax.html#optional-tags
+Don't strictly need <HTML>, <HEAD> or <BODY> tags.
+They are implied.
+An HTML document always has a root <HTML> element.
+The <META> and <TITLE> tags are only allowed in the <HEAD> tag so this is implied.
+Other tags, eg <P>, <DIV> etc are only allowed in the <BODY> tag so this is implied.
+
+Why miss this out?
+Save bytes.
+If used for demoing, then focuses on coding rather than be old school valid (which it is anyhow in the new era).
+
+-->
+
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>NHS Choices reloaded</title>
+
+<style>
+	section {display:block;}
+	html {font-size:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
+	html, input {font-family:sans-serif;}
+	body {margin:0;}
+	a:focus {outline:thin dotted;}
+	a:hover, a:active {outline:0;}
+	h1 {font-size:2em; margin:.4em 0;}
+	abbr[title] {border-bottom:1px dotted;}
+	p, pre {margin:1em 0;}
+	ul {margin:1em 0; padding:0 0 0 40px;}
+	img {border:0; -ms-interpolation-mode:bicubic;}
+	input {font-size:100%; line-height:normal; margin:0; vertical-align:baseline; *vertical-align:middle;}
+	* { -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+	.banner {margin:20px; position:relative; z-index:1;}
+	.container {font-family:Arial, sans-serif; height:100%; left:0; position:absolute; top:0; width:100%;}
+	.container > input, .container > a {bottom:0; cursor:pointer; font-size:16px; height:34px; line-height:34px; position:fixed; width:16.67%;}
+	.container > input {opacity:0; z-index:1000;}
+	.container > a {background:#0064b7; color:#fff; font-weight:700; text-align:center; text-decoration:none; text-shadow:1px 1px 1px rgba(151,24,64,0.2); z-index:10;}
+	.container:before {background:#0064b7; bottom:0; content:''; height:34px; position:fixed; width:100%; z-index:9;}
+	#c1, #c1 + a {left:0;}
+	#c2, #c2 + a {left:16.67%;}
+	#c3, #c3 + a {left:33.33%;}
+	#c4, #c4 + a {left:50%;}
+	#c5, #c5 + a {left:66.67%;}
+	#c6, #c6 + a {left:83.33%;}
+	.container > input:checked + a, .container > input:checked:hover + a {background:#036;}
+	.container > input:checked + a:after, .container > input:checked:hover + a:after {border:solid transparent; border-bottom-color:#036; border-width:20px; bottom:100%; content:''; height:0; left:50%; margin-left:-20px; pointer-events:none; position:absolute; width:0;}
+	.container > input:hover + a {background:#0272d9;}
+	.container > input:hover + a:after {border-bottom-color:#0272d9;}
+	.sections, .section {height:100%; position:relative; width:100%;}
+	.sections {left:0; top:0; -webkit-transition:all 0.6s ease-in-out; -moz-transition:all 0.6s ease-in-out; -o-transition:all 0.6s ease-in-out; -ms-transition:all 0.6s ease-in-out; transition:all 0.6s ease-in-out; -webkit-transform:translate3d(0, 0, 0); -webkit-backface-visibility:hidden;}
+	.section {background:#fff; overflow:hidden; margin:0 auto; width:80%;}
+	.sectioncontainer {margin:75px 0 0 0;}
+	#c1:checked ~ .sections {-webkit-transform:translateY(0%); -moz-transform:translateY(0%); -o-transform:translateY(0%); -ms-transform:translateY(0%); transform:translateY(0%);}
+	#c2:checked ~ .sections {-webkit-transform:translateY(-100%); -moz-transform:translateY(-100%); -o-transform:translateY(-100%); -ms-transform:translateY(-100%); transform:translateY(-100%);}
+	#c3:checked ~ .sections {-webkit-transform:translateY(-200%); -moz-transform:translateY(-200%); -o-transform:translateY(-200%); -ms-transform:translateY(-200%); transform:translateY(-200%);}
+	#c4:checked ~ .sections {-webkit-transform:translateY(-300%); -moz-transform:translateY(-300%); -o-transform:translateY(-300%); -ms-transform:translateY(-300%); transform:translateY(-300%);}
+	#c5:checked ~ .sections {-webkit-transform:translateY(-400%); -moz-transform:translateY(-400%); -o-transform:translateY(-400%); -ms-transform:translateY(-400%); transform:translateY(-400%);}
+	#c6:checked ~ .sections {-webkit-transform:translateY(-500%); -moz-transform:translateY(-500%); -o-transform:translateY(-500%); -ms-transform:translateY(-500%); transform:translateY(-500%);}
+	p, li, a {font-size:17px;}
+	a {color:#0064b7; padding:2px 4px;}
+	a:hover {background:#efefef; color:#578300;}
+	.banner a:hover {background:none;}
+	ul ul {margin-top:10px;}
+	li {margin-bottom:10px;}
+	pre {font-size:15px;}
+	style.editable {background:#000; border:1px solid #000; color:#fff; display:block; padding:0 20px 10px 20px; width:70%;}
+	.banner span {color:#ccc; padding-left:8px; position:relative; top:-8px;}
+	a.ext {background-image: url(data:image/gif;base64,R0lGODlhCQAJAJEDAA9tu/D2+wBkt////yH5BAEAAAMALAAAAAAJAAkAAAITnC0px6o40gkArUEbi1Bz7zxDAQA7); background-position:right top; background-repeat:no-repeat; padding-right:12px;}
+</style>
+
+<div class="banner">
+	<a href="index.html"><img src="data:image/png;base64,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" alt="NHS Choices" width="212" height="35" /></a> <span>[reloaded]</span>
+</div>
+
+<div class="container">
+
+	<input type="radio" name="link" checked="checked" id="c1"/>
+	<a href="#p1">Introduction</a>
+	<input type="radio" name="link" id="c2"/>
+	<a href="#p2">Site refresh</a>
+	<input type="radio" name="link" id="c3"/>
+	<a href="#p3">CSS3/HTML5</a>
+	<input type="radio" name="link" id="c4"/>
+	<a href="#p4">Examples</a>
+	<input type="radio" name="link" id="c5"/>
+	<a href="#p5">Other stuff</a>
+	<input type="radio" name="link" id="c6"/>
+	<a href="#p6">Efficiency</a>
+
+	<div class="sections">
+
+		<section id="p1" class="section">
+			<div class="sectioncontainer">
+				<h1>Introduction</h1>
+				<p>Talk on 3 subjects:</p>
+				<ul>
+					<li>New <a href="http://www.nhs.uk/pages/home.aspx" class="ext" target="_blank">NHS Choices home page</a> and site refresh
+					<li><abbr title="Hypertext Markup Language revision 5">HTML5</abbr> and <abbr title="Cascading Style Sheets Level 3">CSS3</abbr>
+					<li>Three day course &mdash; <a href="https://skillsmatter.com/courses/342-html5-and-beyond" target="_blank" class="ext">'HTML5 and Beyond'</a>
+				</ul>
+			</div>
+		</section>
+
+		<section id="p2" class="section">
+			<div class="sectioncontainer">
+				<h1>NHS Choices site refresh</h1>
+				<ul>
+					<li>Current <a href="http://www.nhs.uk/" target="_blank" class="ext">home page</a> designed in 2010 (release 15!), Health A&ndash;Z &amp; Live well sections even earlier (2009)
+					<li>Political reasons
+					<li>Site refresh based on user research &mdash; what the users want
+						<ul>
+							<li>8 rounds of user testing so far (more details on our <a href="https://staff.nhschoices.net/releases/choicesrelaunch/SitePages/Home.aspx?RootFolder=%2Freleases%2Fchoicesrelaunch%2FShared%20Documents%2FResearch" target="_blank" class="ext">staff site</a>)
+							<li>Looked at branding, values, imagery, styling, tone, layouts, content
+							<li>Various design routes were created and retested
+						</ul>
+					<li>Technology constraints
+						<ul>
+							<li><a href="http://office.microsoft.com/en-gb/sharepoint/" target="_blank" class="ext">SharePoint</a>
+							<li><a href="http://www.brightcove.com/" target="_blank" class="ext">Brightcove</a> video players
+						</ul>
+					<li>Has resulted in
+						<ul>
+							<li><a href="http://www.nhs.uk/pages/home.aspx" target="_blank" class="ext">New home page</a>
+							<li><a href="http://www.nhs.uk/livewell/" target="_blank" class="ext">Live well hub</a>, <a href="http://www.nhs.uk/Livewell/coldsandflu/Pages/Preventionandcure.aspx" target="_blank" class="ext">Live well article</a> 
+							<li><a href="http://www.nhs.uk/conditions" target="_blank" class="ext">Health AZ hub</a>, <a href="http://www.nhs.uk/conditions/Arthritis/Pages/Introduction.aspx" target="_blank" class="ext">Health AZ condition article</a>
+							<li><a href="http://www.nhs.uk/news/" target="_blank" class="ext">Health news hub</a>, <a href="http://www.nhs.uk/news/2014/12December/Pages/Spicy-food-curries-favour-with-alpha-males.aspx" target="_blank" class="ext">Health news article</a>
+						</ul>
+				</ul>
+			</div>
+		</section>
+
+		<section id="p3" class="section">
+			<div class="sectioncontainer">
+				<h1>CSS3/HTML5</h1>
+				<ul>
+					<li>Opportunity to use current browser features (that have been around for a while)
+					<li>Able to do so because IE6 support has been dropped
+					<li>Still have to support IE7/8, so use of new HTML5 tags e.g. <code>&lt;header&gt;, &lt;nav&gt;, &lt;footer&gt;</code> limited
+						<ul>
+							<li>Could use 'polyfills' or 'shims/shivs', which is usually javascript to provide the functionality that the browser should provide natively, e.g. <a href="http://modernizr.com/" target="_blank" class="ext">Modernizr</a>, <a href="https://github.com/aFarkas/html5shiv/" target="_blank" class="ext">html5shiv</a>
+							<li>Extra js call
+							<li>Changes to template markup
+							<li>Time constraints
+						</ul>
+				</ul>
+				<h1>Newer CSS features used</h1>
+				<ul>
+					<li>Border radius
+					<li>Box shadow
+					<li>Text shadow
+					<li>Pseudo classes (such as <code>:first-child</code>, <code>:checked</code>)
+				</ul>
+			</div>
+		</section>
+
+		<section id="p4" class="section">
+			<div class="sectioncontainer">
+				<h1>Examples</h1>
+<style>
+	.cta {background:#0065b7; border:2px solid #adadad; color:#fff; cursor:pointer; display:inline-block; font-size:22px; margin-left:140px; padding:15px; text-align:center; text-decoration:none;}
+	.cta:hover {color:#fff;}
+</style>
+<pre><style contenteditable="true" class="editable">
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.cta {
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #ccc;
+  text-shadow: 1px 1px 2px #333;
+  animation: fadeIn ease-in 1;
+  animation-duration: .5s;
+  animation-delay: .5s;
+  transition: all 250ms ease-in;
+}
+
+.cta:hover {
+  background: #036;
+  box-shadow: 2px 2px 20px #666;
+  transform: scale(1.25);
+}</style>
+
+&lt;p class=&quot;cta&quot;>&lt;a href=&quot;#&quot;&gt;Find conditions and treatments&lt;/a&gt;&lt;/p&gt;
+
+</pre>
+			<a href="#" class="cta" contenteditable="true">Find conditions and treatments</a>
+
+			</div>
+		</section>
+
+		<section id="p5" class="section">
+			<div class="sectioncontainer">
+				<h1>Other things from the course</h1>
+				<ul>
+					<li>Lots of JavaScript
+					<li>CSS Flexbox &mdash; changing layout order
+					<li>Audio and video &mdash; <code>&lt;audio&gt;, &lt;video&gt;</code> and codec support
+					<li>Forms &mdash; placeholder, pattern matching, validation, new types
+					<li>Graphics &mdash; <abbr title="Scalable Vector Graphics">SVG</abbr> and Canvas
+					<li>Geolocation
+					<li>Web and database storage &mdash; local and session
+					<li>Offline storage &mdash; manifests, <code>&lt;html manifest=&quot;appname.appcache&quot;&gt;</code>
+					<li>JavaScript unit testing &mdash; <a href="http://qunitjs.com/" target="_blank" class="ext">QUnit</a>
+					<li>Webworkers
+				</ul>
+			</div>
+		</section>
+
+		<section id="p6" class="section">
+			<div class="sectioncontainer">
+				<h1>Efficiency</h1>
+				<p>Implemented on the site now:</p>
+				<ul>
+					<li>Base64 encoding images
+						<ul>
+							<li>Reduces server calls
+							<li>Load instantly with the css
+						</ul>
+					<li>Use of pseudo selectors &mdash; :first-child
+					<li>Text shadow
+					<li>Caching &mdash; <a href="http://www.akamai.com/" target="_blank" class="ext">Akamai</a>, <abbr title="content delivery network">CDN</abbr> 
+				</ul>
+				<p>Future nice to haves:</p>
+				<ul>
+					<li>Minification of CSS and JS and HTML
+					<li>GZip components
+					<li>Inline some CSS and JS &mdash; above the fold content <!-- perceived performance - css and js blocks rendering until assets have loaded, but prevents browser from caching the code for reuse on other pages - has to load it again. -->
+				</ul>
+				<p>Reduce downloaded resources &mdash; <abbr title="Hypertext Tranfer Protocol">HTTP</abbr> requests are expensive!</p> <!-- already have DNS lookups, tcp connections, time to send request, headers, server response time, the response, then the content download, was worked out that the magic number is 14kb of data is transferred for the first round trip -->
+			</div>
+		</section>
+
+	</div>
+</div>
