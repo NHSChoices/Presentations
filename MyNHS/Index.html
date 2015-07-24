@@ -1,0 +1,712 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My NHS - NHS Choices</title>
+    <!-- start dynamic content. Remove this and end comment when variables put in place -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="DC.title" content="" />
+    <meta name="DC.description" content="" />
+    <meta name="DC.subject" scheme="eGMS.IPSV" content="" />
+    <meta name="DC.Subject" scheme="NHSC.Ontology" content="" />
+    <meta name="DC.Subject" scheme="NHSC.Ontology" content="" />
+    <meta name="DC.date.issued" scheme="W3CDTF" content="" />
+    <meta name="WT.ti" content="NHS Choices - Your health, your choices" />
+    <!-- end dynamic content.... -->
+    <meta name="DC.coverage" content="England" />
+    <meta name="DC.creator" content="NHS Choices" />
+    <meta name="DC.format" scheme="IMT" content="text/html" />
+    <meta name="DC.language" scheme="ISO 639-2/T" content="eng" />
+    <meta name="DC.identifier" scheme="URI" content="http://www.nhs.uk" />
+    <meta name="DC.publisher" content="Department of Health" />
+    <meta name="DC.rights" content="http://www.nhs.uk/termsandconditions/Pages/TermsConditions.aspx" />
+    <meta name="eGMS.accessibility" scheme="eGMS.WCAG10" content="Double-A" />
+    <meta http-equiv="pics-Label" content='(pics-1.1 "http://www.icra.org/pics/vocabularyv03/" l gen true for "http://nhs.uk" r (n 2 s 1 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 1) gen true for "http://www.nhs.uk" r (n 2 s 1 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 1))' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="meta" href="/includes/labels.rdf" type="application/rdf+xml" title="ICRA labels" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" type="text/css" href="http://www.nhs.uk/css/base.css" media="" />
+    <link rel="stylesheet" type="text/css" href="http://www.nhs.uk/css/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="http://www.nhs.uk/css/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="http://www.nhs.uk/css/screen.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="http://www.nhs.uk/Service-Search/Content/css/findandcompare.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="http://www.nhs.uk/Service-Search/Content/css/tooltip.min.css" media="screen" />
+    <!--[if lte IE 7]>
+      <link  rel="stylesheet" type="text/css" href="/Service-Search/Content/css/ie7.css" media="screen" />
+    <![endif]-->
+    <script type="text/javascript" src="http://www.nhs.uk/includes/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://www.nhs.uk/Service-Search/Scripts/jquery-ui-1.8.21.min.js"></script>
+    <script type="text/javascript" src="http://www.nhs.uk/includes/jquery.cookie.js"></script>
+    <script type="text/javascript" src="http://www.nhs.uk/Service-Search/Scripts/tooltip.min.js"></script>
+    <script type="text/javascript" src="http://www.nhs.uk/Service-Search/Scripts/accountability.js"></script>
+    <script type="text/javascript" src="http://www.nhs.uk/Service-Search/Scripts/performance.shortlist.js"></script>
+    <script type="text/javascript" src="http://www.nhs.uk/includes/webtrends.load.js"></script>
+    <script type="text/javascript" src="http://www.nhs.uk/Service-Search/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+</head>
+
+<body class="performance" id="performance">
+    <div class="wrap">
+        <div class="header clear">
+            <h1><a href="/Service-Search/performance/search"><span class="my">My NHS <sup>BETA</sup></span></a> <span class="hidden"> - </span>Data for better services</h1>
+            <p class="backto"><a href="/">NHS Choices </a>&gt;</p>
+        </div>
+        <div class="content-wrap">
+            <div class="performancewrap">
+                <h2 class="home">Performance information to support transparency and drive quality</h2>
+                <div class="intro clear">
+                    <div class="text">
+                        <p>By making our data available to all we aim to drive up quality and help create even better services.</p>
+                        <p>Here you can see key data used by the NHS and local councils to monitor performance and shape the services you use. We’re continually adding new information, and working to make it as clear as possible, based on what people tell us they want to see. </p>
+                        <p>Since the launch of My NHS in Autumn 2014, we’ve improved the site to make it easier to use. We’ve now changed the mental health data display so it can be sorted by trust. On hospitals, we’ve added independent sector hospitals, patient-reported outcomes, the Friends and Family Test, and a range of treatment data.</p>
+                        <p>To keep improving, we need your <a href="#top-of-form">feedback, so take a look, then tell us what you think of the site.</a> </p>
+                    </div>
+                    <div class="image">
+                        <p><img src="http://www.nhs.uk/Service-Search/Content/img/graph-large.gif" /></p>
+                    </div>
+                </div>
+
+                <div class="mynhs-tab-wrapper no-js clear">
+                    <div id="services-panel" class="tab-content">
+                        <h2>Explore the data</h2>
+                        <div class="services">
+                            <h2>Services</h2>
+                            <p>See how local health and social care services are performing</p>
+                            <ul>
+                                <li><a href="/Hospitals.html">Hospitals</a></li>
+                                <li><a href="/GP.html">GP practices</a></li>
+                            </ul>
+
+                            <h3>Mental health</h3>
+                            <ul class="mental-health">
+                                <li><a href="http://www.nhs.uk/Service-Search/performance/Results?ResultsViewId=1054">Mental health trusts</a></li>
+                                <li><a href="http://www.nhs.uk/Service-Search/performance/Results?ResultsViewId=1080">Psychological therapies (IAPT)</a></li>
+                            </ul>
+
+                            <h3><a href="http://www.nhs.uk/Service-Search/performance/Specialty">Specialty Treatments</a></h3>
+                            <ul>
+                                <li><a href="http://www.nhs.uk/Service-Search/performance/Results?ResultsViewId=1082">Hip replacement</a></li>
+                                <li><a href="http://www.nhs.uk/Service-Search/performance/Results?ResultsViewId=1083">Knee replacement</a></li>
+                                <li><a href="http://www.nhs.uk/Service-Search/performance/Results?ResultsViewId=1076">Stroke</a></li>
+                            </ul>
+
+                            <div class="consultants-homepage">
+                                <h2><a href="http://www.nhs.uk/Service-Search/performance/Consultants">Consultants</a></h2>
+                            </div>
+                        </div>
+                        <div class="hwb-container">
+                            <h2>Health &amp; Wellbeing</h2>
+                            <p>See how local communities are performing in a range of health and social care outcomes</p>
+                            <ul>
+                                <li><a href='http://www.nhs.uk/Service-Search/performance/Results?ResultsViewId=1004'>Social care</a> (by Local Authority)</li>
+                                <li><a href='http://www.nhs.uk/Service-Search/performance/Results?ResultsViewId=1075'>Health and wellbeing outcomes</a> (by Local Authority)</li>
+                                <li><a href='http://www.nhs.uk/Service-Search/performance/Results?ResultsViewId=1041'>Integrated health and social care</a> (by Local Authority)</li>
+                                <li><a href="http://www.nhs.uk/Service-Search/performance/Results?ResultsViewId=1016">Public health programmes</a> (by area)</li>
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+                    <div id="downloads-panel" class="tab-content">
+
+                        <h2>Downloads</h2>
+                        <div class="downloads">
+                            <p>Download and take away the data.</p>
+                            <p>For details of how to make use of these files see <a href="/aboutNHSChoices/contactus/Documents/NHS%20Choices%20-%20About%20our%20data%20downloads%20V1.pdf">About our data downloads (PDF, 109kb).</a></p>
+                            <ul>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsHospitalsPerformance.csv">Download hospitals raw data</a> <span>(CSV, approx. 10.4mb)</span></li>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsSocialCarePerformance.csv">Download social care outcomes raw data</a> <span>(CSV, approx. 138kb)</span></li>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsPublicHealthServiceDeliveryPerformance.csv">Download public health programmes raw data</a> <span>(CSV, approx. 2.7mb)</span></li>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsHealthAndWellbeingOutcomesPerformance.csv">Download health and wellbeing outcomes raw data</a> <span>(CSV, approx. 706kb)</span></li>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsMentalHealthTrustsPerformance.csv">Download mental health trusts raw data</a> <span>(CSV, approx. 200kb)</span></li>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsGPPerformance.zip">Download general practice raw data</a> <span>(ZIP, approx. 129mb)</span></li>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsStrokeCarePerformance.csv">Download stroke care raw data</a> <span>(CSV, approx. 74kb)</span></li>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsIntegrationOfHealthAndSocialCarePerformance.csv">Download Integrated health and social care raw data</a> <span>(CSV, approx. 93kb)</span></li>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsHipReplacementPerformance.csv">Download hip replacement raw data</a> <span>(CSV, approx. 257kb)</span></li>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsKneeReplacementPerformance.csv">Download knee replacement raw data</a> <span>(CSV, approx. 259kb)</span></li>
+                                <li><a href="http://media.nhschoices.nhs.uk/data/foi/TransparencyIndicatorsIAPTservicesPerformance.csv">Download psychological therapies (IAPT) raw data</a> <span> (CSV, approx. 47kb)</span></li>
+                                <li><a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/403093/mynhsroadmap.pdf">Download the MyNHS transparency roadmap</a> <span>(PDF, 170kb)</span></li>
+                            </ul>
+                            <div class="logo">
+                                <p><img src="/Service-Search/Content/img/logo-ogl-transparent.png" class="fl" alt="Open Government Licence" /> The downloads are available under the<br /><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">Open Government Licence v2.0</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whatitmeans" id="context">
+
+                    <h2>Context</h2>
+                    <div class="tabcontainer">
+                        <ul class="tablist clear" role="tablist">
+                            <li role="presentation" class="current"><a href="#panel1" id="tab1" aria-controls="panel1" aria-selected="true" role="tab"><span class="tabwrap"><span class="tabheader">NHS England Medical Director's view</span><span class="hidden"> - </span>Sir Bruce Keogh discusses how the NHS is performing.</span><span class="arrow"></span></a></li>
+                            <li role="presentation"><a href="#panel2" id="tab2" aria-controls="panel2" aria-selected="false" role="tab"><span class="tabwrap"><span class="tabheader">How has hospital activity changed?</span><span class="hidden"> - </span>View trends in hospital activity for key areas and common procedures.</span><span class="arrow"></span></a></li>
+                            <li role="presentation" class="last"><a href="#panel3" id="tab3" aria-controls="panel3" aria-selected="false" role="tab"><span class="tabwrap"><span class="tabheader">Have health outcomes improved?</span><span class="hidden"> - </span>Find out how health outcomes have changed in recent years.</span><span class="arrow"></span></a></li>
+                        </ul>
+                    </div>
+
+                    <div id="panel1" class="tabpanel" aria-labelledby="tab1" role="tabpanel" aria-hidden="false">
+                        <div class="clear">
+                            <div class="text">
+                                <h3>NHS England Medical Director's view</h3>
+                                <p>In the NHS and across the public sector we are committed to making sure information about the quality of our services is available and accessible to all.  Making information readily available in one place allows people to hold us to account, not just for the amount of money we spend providing care but for how it is spent and what it delivers for the public. We know that there is already lots of data published on a range of websites but it can be difficult to find and harder to compare, even if you are an expert. On this site we have one place where organisations, professionals and the public can compare the performance of services across health and care, over a range of measures, and on local and national levels.</p>
+                                <p>Overall, what this wealth of published data suggests is an encouraging picture. Despite having received little increase in funding over recent years, the NHS continues to provide high-quality care, often to the highest standards in the world. We are meeting the challenge of increasing demand and treating more people than ever before. Despite the growing numbers of frail older people with complex medical conditions, the number of avoidable emergency admissions has risen only slightly and infection rates continue to fall. For people with long-term conditions, emergency admissions to hospital have actually fallen. With some inexcusable exceptions, patient care is excellent and the majority of patients tell us that their experience of NHS care is positive. Perhaps, most importantly, the success of the NHS can be judged by the fact that, in part as a consequence of healthcare they receive, people are living longer than ever before.</p>
+                            </div>
+                            <div class="image">
+                                <p><img src="http://www.nhs.uk/Service-Search/Content/img/bruce-keogh.jpg" alt="Sir Bruce Keogh, NHS England Medical Director"></p>
+                                <p>Sir Bruce Keogh, NHS England Medical Director</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel2" class="tabpanel" aria-labelledby="tab2" role="tabpanel" aria-hidden="true">
+                        <h3>Hospital activity data</h3>
+                        <p class="panelintro">These graphs show how hospital activity has changed in recent years. The statistics are presented for all years that have readily available data.</p>
+
+                        <div class="clear">
+                            <div class="graph">
+                                <div class="container">
+                                    <h4>GP referrals</h4>
+                                    <p class="graphdesc">Total number of GP referrals made (all specialities) - 2008/09 - 2013/14</p>
+                                    <p class="graphimg"><img src="http://www.nhs.uk/Service-Search/Content/img/graph-gpreferrals.gif" alt="bar graph showing total number of GP referrals made (all specialities) 2008/09 - 2013/14" /></p>
+                                    <table class="hidden" summary="Table showing total number of GP referrals made (all specialities) - 2008/09 - 2013/14">
+                                        <tr>
+                                            <th>Year</th>
+                                            <th>Number</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2008/09</td>
+                                            <td>10,640,727</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009/10</td>
+                                            <td>11,209,590</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010/11</td>
+                                            <td>11,583,243</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011/12</td>
+                                            <td>11,453,226</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012/13</td>
+                                            <td>11,671,176</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013/14</td>
+                                            <td>12,461,470</td>
+                                        </tr>
+                                    </table>
+                                    <p class="graphsource"><strong>Source:</strong> NHS England Monthly Activity Report (MAR)</p>
+                                </div>
+                                <p>In 2013/14, GPs made nearly 12.5 million referrals. This was an increase of 17.6% from 2008/09.</p>
+                            </div>
+                            <div class="graph last">
+                                <div class="container">
+                                    <h4>Diagnostic test activity</h4>
+                                    <p class="graphdesc">Diagnostic test activity for 15 tests in diagnostic waiting times measure - 2007/08 - 2013/14</p>
+                                    <p class="graphimg"><img src="/Service-Search/Content/img/graph-diagnostictests.gif" alt="bar graph showing diagnostic test activity for 15 tests in diagnostic waiting times measure - 2007/08 - 2013/14" /></p>
+                                    <table class="hidden" summary="Table showing diagnostic test activity for 15 tests in diagnostic waiting times measure - 2007/08 - 2013/14">
+                                        <tr>
+                                            <th>Year</th>
+                                            <th>Number</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2007/08</td>
+                                            <td>11,797,469</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008/09</td>
+                                            <td>13,158,340</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009/10</td>
+                                            <td>14,354,214</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010/11</td>
+                                            <td>15,052,374</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011/12</td>
+                                            <td>15,874,352</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012/13</td>
+                                            <td>16,846,757</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013/14</td>
+                                            <td>17,980,046</td>
+                                        </tr>
+                                    </table>
+                                    <p class="graphsource"><strong>Source:</strong> NHS England Monthly Activity Report (MAR)</p>
+                                </div>
+                                <p>The number of diagnostic tests carried out by the NHS, as measured in the diagnostic tests waiting times statistics, increased by 50.6% between 2007/08 and 2013/14 from 11.8 million to 18.0 million.</p>
+                            </div>
+                        </div>
+
+                        <div class="clear">
+                            <div class="graph">
+                                <div class="container">
+                                    <h4>Patients seen by a specialist after an urgent referral</h4>
+                                    <p class="graphdesc">Number of patients seen by a specialist after an urgent referral from a GP for suspected cancer (all cancers) - 2009/10 - 2013/14</p>
+                                    <p class="graphimg"><img src="/Service-Search/Content/img/graph-cancer.gif" alt="bar graph showing number of patients seen by a specialist after an urgent referral from a GP for suspected cancer (all cancers) - 2009/10 - 2013/14" /></p>
+                                    <table class="hidden" summary="Table showing number of patients seen by a specialist after an urgent referral from a GP for suspected cancer (all cancers) - 2009/10 - 2013/14">
+                                        <tr>
+                                            <th>Year</th>
+                                            <th>Number</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2009/10</td>
+                                            <td>904,209</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010/11</td>
+                                            <td>1,005,046</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011/12</td>
+                                            <td>1,108,516</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012/13</td>
+                                            <td>1,220,177</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013/14</td>
+                                            <td>1,361,345</td>
+                                        </tr>
+                                    </table>
+                                    <p class="graphsource"><strong>Source:</strong> NHS England quarterly cancer waiting times</p>
+                                </div>
+                                <p>In 2013/14, NHS specialists saw 1.4 million patients referred from their GP because of a suspected cancer diagnosis. This was an increase of 50% from 2009/10.</p>
+                            </div>
+                            <div class="graph last">
+                                <div class="container">
+                                    <h4>Cataract operations</h4>
+                                    <p class="graphdesc">Cataract operations (FCEs and outpatient attendances) - 1999/00 - 2012/13</p>
+                                    <p class="graphimg"><img src="/Service-Search/Content/img/graph-cataracts.gif" alt="bar graph showing cataract operations (FCEs and outpatient attendances) - 1999/00 - 2012/13" /></p>
+                                    <table class="hidden" summary="Table showing cataract operations (FCEs and outpatient attendances) - 1999/00 - 2012/13">
+                                        <tr>
+                                            <th>Year</th>
+                                            <th>Number - Inpatients</th>
+                                            <th>Number - Outpatients</th>
+                                            <th>Number - Total</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1999/00</td>
+                                            <td>227,754</td>
+                                            <td></td>
+                                            <td>227,754</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2000/01</td>
+                                            <td>253,833</td>
+                                            <td></td>
+                                            <td>253,833</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2001/02</td>
+                                            <td>261,488</td>
+                                            <td></td>
+                                            <td>261,488</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2002/03</td>
+                                            <td>282,786</td>
+                                            <td></td>
+                                            <td>282,786</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2003/04</td>
+                                            <td>308,906</td>
+                                            <td>11,302</td>
+                                            <td>320,208</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2004/05</td>
+                                            <td>316,205</td>
+                                            <td>10,245</td>
+                                            <td>326,450</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2005/06</td>
+                                            <td>298,437</td>
+                                            <td>11,350</td>
+                                            <td>309,787</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2006/07</td>
+                                            <td>301,607</td>
+                                            <td>11,382</td>
+                                            <td>312,989</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2007/08</td>
+                                            <td>325,471</td>
+                                            <td>11,363</td>
+                                            <td>336,834</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008/09</td>
+                                            <td>344,591</td>
+                                            <td>14,907</td>
+                                            <td>359,498</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009/10</td>
+                                            <td>348,660</td>
+                                            <td>17,067</td>
+                                            <td>365,727</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010/11</td>
+                                            <td>343,782</td>
+                                            <td>24,108</td>
+                                            <td>367,890</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011/12</td>
+                                            <td>336,967</td>
+                                            <td>35,522</td>
+                                            <td>372,489</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012/13</td>
+                                            <td>336,638</td>
+                                            <td>39,867</td>
+                                            <td>376,505</td>
+                                        </tr>
+                                    </table>
+                                    <p class="graphsource"><strong>Source:</strong> HSCIC annual hospital episode statistics - admitted patient care (HES APC) and outpatients (HES OP)</p>
+                                </div>
+                                <p>Between 1999/00 and 2012/13, the number of inpatient cataract procedures increased by 50.2%. Between 2003/04 and 2012/13, the number of outpatient cataract procedures carried out has more than tripled.</p>
+                            </div>
+                        </div>
+
+                        <div class="clear">
+                            <div class="graph">
+                                <div class="container">
+                                    <h4>Knee replacements</h4>
+                                    <p class="graphdesc">Knee replacements (FCEs) - 1999/00 - 2012/13</p>
+                                    <p class="graphimg"><img src="/Service-Search/Content/img/graph-knees.gif" alt="bar graph showing Knee replacements (FCEs) - 1999/00 - 2012/13" /></p>
+                                    <table class="hidden" summary="Table showing knee replacements (FCEs) - 1999/00 - 2012/13">
+                                        <tr>
+                                            <th>Year</th>
+                                            <th>Number</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1999/00</td>
+                                            <td>33,397</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2000/01</td>
+                                            <td>35,827</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2001/02</td>
+                                            <td>38,991</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2002/03</td>
+                                            <td>45,741</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2003/04</td>
+                                            <td>52,535</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2004/05</td>
+                                            <td>56,652</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2005/06</td>
+                                            <td>59,755</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2006/07</td>
+                                            <td>63,196</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2007/08</td>
+                                            <td>72,628</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008/09</td>
+                                            <td>75,306</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009/10</td>
+                                            <td>73,378</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010/11</td>
+                                            <td>76,526</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011/12</td>
+                                            <td>79,334</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012/13</td>
+                                            <td>78,841</td>
+                                        </tr>
+                                    </table>
+                                    <p class="graphsource"><strong>Source:</strong> HSCIC annual hospital episode statistics - admitted patient care (HES APC)</p>
+                                </div>
+                                <p>In 2012/13, the NHS carried out 79,000 knee replacement operations. This was an increase of 139.8% from 1999/00.</p>
+                            </div>
+                            <div class="graph last">
+                                <div class="container">
+                                    <h4>Hip replacements</h4>
+                                    <p class="graphdesc">Hip replacements (FCEs) - 1999/00 - 2012/13</p>
+                                    <p class="graphimg"><img src="/Service-Search/Content/img/graph-hips.gif" alt="bar graph showing hip replacements (FCEs) - 1999/00 - 2012/13" /></p>
+                                    <table class="hidden" summary="Table showing hip replacements (FCEs) - 1999/00 - 2012/13">
+                                        <tr>
+                                            <th>Year</th>
+                                            <th>Number</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1999/00</td>
+                                            <td>69,661</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2000/01</td>
+                                            <td>70,258</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2001/02</td>
+                                            <td>72,271</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2002/03</td>
+                                            <td>77,195</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2003/04</td>
+                                            <td>81,437</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2004/05</td>
+                                            <td>82,919</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2005/06</td>
+                                            <td>84,914</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2006/07</td>
+                                            <td>89,254</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2007/08</td>
+                                            <td>97,026</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008/09</td>
+                                            <td>100,581</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009/10</td>
+                                            <td>101,020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010/11</td>
+                                            <td>105,979</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011/12</td>
+                                            <td>109,598</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012/13</td>
+                                            <td>110,528</td>
+                                        </tr>
+                                    </table>
+                                    <p class="graphsource"><strong>Source:</strong> HSCIC annual hospital episode statistics - admitted patient care (HES APC)</p>
+                                </div>
+                                <p>In 2012/13, the NHS carried out 111,000 hip replacement operations. This was an increase of 61.2% from 1999/00.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel3" class="tabpanel" aria-labelledby="tab3" role="tabpanel" aria-hidden="true">
+                        <h3>Health outcomes</h3>
+
+                        <h4>The effects of better care on life expectancy</h4>
+                        <p>In 2012, the number of potential years of men's life lost by causes that can be dealt with by better healthcare was 3,100 per 100,000 population. This is a fall of 31% since 2003.</p>
+                        <p>Similarly in 2012, the number of potential years of women's life lost by causes that can be dealt with by better healthcare was 2,500 per 100,000 population. This is a fall of 27% since 2003.</p>
+
+                        <p class="centre"><img src="/Service-Search/Content/img/PYLL_chart.gif"></p>
+
+                        <p>The graph shows potential years of adult life lost by causes that can be dealt with by better healthcare.</p>
+
+                        <h4>Emergency hospital admissions for long-term conditions</h4>
+                        <p>Some long-term health conditions (such as asthma or epilepsy) can be prevented from getting suddenly worse (such as an asthma attack or epileptic fit) by better healthcare such as vaccination and changes to lifestyle. In 2012/13, there were 2,000 emergency admissions to hospital for people with such conditions. This was an increase of 4.3% from 2009/10.</p>
+                        <p>This increase in these emergency admissions is most likely to be due to there now being more older people living with several different long-term conditions who experience sudden episodes of unrelated conditions such as urinary tract infections.</p>
+
+                        <h4>Superbugs (hospital acquired infections)</h4>
+                        <p>Between 2009/10 and 2013/14, the number of cases of MRSA bacteraemia decreased by 54.6%.</p>
+                        <p>Between 2009/10 and 2013/14, the number of cases of C. difficile decreased by 47.8%.</p>
+
+                        <h4>'Patient experience'</h4>
+                        <p>Patients say their hospital care is improving. In 2013/14, the average patient experience score for hospital care was 77 out of 100. This was an increase of 1.3 points since 2009/10.</p>
+
+                    </div>
+                </div>
+
+                <div class="data-providers homepage clear">
+                    <h2>Data providers</h2>
+                    <p>Health and care data on MyNHS is compiled by the Department of Health and NHS England in collaboration with Public Health England and the Care Quality Commission.</p>
+                    <p>The indicators selected for inclusion by these organisations draw on data that has been previously validated and published.</p>
+                    <p>Consultant outcome data has been compiled and published by the relevant specialty associations.</p>
+
+                </div>
+
+                <div class="feedback-wrapper clear">
+
+                    <div class="feedback-intro">
+                        <a id="top-of-form" href="#"></a>
+                        <h2>We want your feedback</h2>
+                        <p>We'll continually add to this performance information, listen to what you want, and work to make it as clear as possible. Contact us to suggest any improvements or provide any feedback.</p>
+                    </div>
+
+                    <form action="/Service-Search/Performance/Feedback" data-ajax="true" data-ajax-failure="onFeedbackFormAjaxCallComplete" data-ajax-mode="replace" data-ajax-success="onFeedbackFormAjaxCallComplete" data-ajax-update="#fieldset" id="feedback" method="post">
+                        <fieldset id="fieldset">
+
+
+
+
+                            <legend><span class="hidden">Feedback form</span></legend>
+
+                            <div>
+                                <label for="name">Your name</label>
+                                <input class="text-box single-line" id="Name" name="Name" type="text" value="" />
+                            </div>
+
+                            <div>
+                                <label for="emailaddress">Your email address</label>
+                                <input class="text-box single-line" id="EmailAddress" name="EmailAddress" type="text" value="" />
+                            </div>
+
+                            <div>
+                                <label for="organisationname">Your organisation (optional)</label>
+                                <input class="text-box single-line" id="OrganisationName" name="OrganisationName" type="text" value="" />
+                            </div>
+
+                            <div>
+                                <label for="jobtitle">Your job title (optional)</label>
+                                <input class="text-box single-line" id="JobTitle" name="JobTitle" type="text" value="" />
+                            </div>
+
+                            <div>
+                                <label for="FeedbackAbout">Your feedback is about</label>
+                                <select name="FeedbackAbout" id="FeedbackAbout">
+                                    <option value="General">General</option>
+                                    <option value="Consultants">Consultants</option>
+                                    <option value="GP practices">GP Practices</option>
+                                    <option value="Health &amp; wellbeing outcomes">Health &amp; wellbeing outcomes</option>
+                                    <option value="Hip replacement">Hip replacement</option>
+                                    <option value="Hospitals">Hospitals</option>
+                                    <option value="Psychological therapies (IAPT)">Psychological therapies (IAPT)</option>
+                                    <option value="Integration of health &amp; social care">Integration of health &amp; social care</option>
+                                    <option value="Knee replacement">Knee replacement</option>
+                                    <option value="Mental health trusts">Mental health trusts</option>
+                                    <option value="Public health programmes">Public health programmes</option>
+                                    <option value="Social care outscomes">Social care outcomes</option>
+                                    <option value="Stroke care">Stroke care</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="textarea">Feedback message <br /> (maximum length 1500 chars)</label>
+                                <textarea cols="35" id="textarea" name="FeedbackMessage" rows="8"></textarea>
+                            </div>
+
+                            <div>
+                                <input class="submit" type="submit" value="Send">
+                            </div>
+
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+
+                    $("#panel2, #panel3").addClass("panelhide");
+
+                    $(".tabwrap").click(function (e) {
+                        if ($(window).width() > 640) {
+                            e.preventDefault();
+                        }
+                    });
+
+                    $("a[role='tab']").click(function (e) {
+                        if ($(window).width() > 640) {
+                            e.preventDefault();
+                            $("a[role='tab']:not(this)").attr("aria-selected", "false");
+                            $(this).attr("aria-selected", "true");
+                            var tabpanid = $(this).attr("aria-controls");
+                            var tabpan = $("#" + tabpanid);
+                            $("div[role='tabpanel']:not(tabpan)").attr("aria-hidden", "true").addClass("panelhide");
+                            tabpan.attr("aria-hidden", "false").removeClass("panelhide");
+                            $(".tablist li").removeClass("current");
+                            $(this).parent().addClass("current");
+                        }
+                    });
+
+                    $("a[role='tab']").keydown(function (ev) {
+                        if (ev.which == 13) {
+                            $(this).click();
+                        }
+                    });
+
+                });
+            </script>
+
+        </div>
+        <div class="footer">
+            <div class="footerwrap">
+                <div class="clear">
+                    <div class="mynhs">
+                        <p class="mynhslink"><a href="http://www.nhs.uk/Service-Search/performance/search">My NHS <sup>BETA</sup></a></p>
+                    </div>
+                    <div class="footerlogos">
+                        <ul>
+                            <li><a href="http://www.nhs.uk"><img class="nhs-choices" alt="Link to NHS Choices" src="http://www.nhs.uk/Service-search/Content/img/logo-choices-small.gif"></a></li>
+                            <li><a href="http://www.gov.uk/"><img class="gov-uk" alt="Link to gov.uk &ndash; The new place to find government services and information" src="http://www.nhs.uk/Service-Search/Content/img/logo-govuk.gif"></a></li>
+                            <li><a href="http://www.nhs.uk/aboutNHSChoices/aboutnhschoices/Aboutus/Pages/the-information-standard.aspx"><img alt="The Information Standard - Certified member" src="http://www.nhs.uk/Service-Search/Content/img/logo-informationstandard.gif"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- webtrends noscript tag -->
+    <noscript>
+        <img alt="dcsimg" id="dcsimg" width="1" height="1" src="//statse.webtrendslive.com/dcss9yzisf9xjyg74mgbihg8p_8d2u/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=10.4.1&amp;dcssip=.www.nhs.uk" />
+    </noscript>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-9510975-1', 'www.nhs.uk');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
