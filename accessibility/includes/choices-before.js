@@ -3068,10 +3068,6 @@ jQuery(document).ready(function($) {
           $(".footer-tab-content ul.info, .mobile .footer .language-intro ").addClass("hidden");
           $(footerHeaders).addClass("show").append(' <i aria-hidden="true">&#9658;</i>');
         
-          // Accessibility - add aria and role and other bits
-          $(".footer-tab1").attr({"role": "tablist", "aria-multiselectable": "true"});
-          $(".footer-tab-wrap li:first, .footer-tab-wrap li:first a").attr("tabIndex", "-1");
-          $(".language-intro, .footer-logos .hidden").attr("aria-hidden", "true");
           var number = 1;
           
           $(footerHeaders).each(function() {
@@ -3092,49 +3088,20 @@ jQuery(document).ready(function($) {
             if ($(this).next("span").hasClass("language-intro")) {
               var langs = $(this).nextAll(".language-intro");
               $(langs).toggleClass("hidden");
-              if ($(langs).hasClass("hidden")) {
-                $(langs).attr("aria-hidden", "true");
-              } else {
-                $(langs).attr("aria-hidden", "false");
-              }
             }
             
             if ($(this).hasClass("hide")) {
               $(this).html(function() { return $(this).html().replace(rightArrow,downArrow); });
-              $(this).attr({"aria-selected": 'true', "aria-expanded": 'true'});
               $(this).next("ul").attr("aria-hidden", 'false');
               $(this).parent().find('a').attr('tabIndex', 0);
             } else {
               $(this).html(function() { return $(this).html().replace(downArrow,rightArrow); });
-              $(this).attr({"aria-selected": 'false', "aria-expanded": 'false'});
               $(this).next("ul").attr("aria-hidden", 'true');
               $(this).parent().find('a').attr('tabIndex', -1);
             }
 
           });
           
-          // footer keyboard navigation
-          $(footerHeaders).keydown(function(e) {
-            if (e.which === 13 || e.which === 32) { // pressing enter or space bar
-              $(this).click();
-            } else { 
-              if (e.which === 40 || e.which === 39) { // navigate headers using down or right arrow or tab
-                if ($(this).parent().is(':last-child')) {
-                  $(this).parent().parent().find('h2:first').focus();
-                } else {
-                  $(this).parent().next().find('h2').focus();
-                }
-              } 
-              if (e.which == 38 || e.which == 37) { // up or left arrow
-                e.preventDefault();
-                if ($(this).parent().is(':first-child')) {
-                  $(this).parent().parent().find('h2:last').focus();
-                } else {
-                  $(this).parent().prev().find('h2').focus();
-                }
-              }
-            }
-          });
 
           $(".footer-list li:last-child").css("border", "none");
         
