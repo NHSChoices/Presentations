@@ -3599,29 +3599,3 @@ jQuery(document).ready(function($) {
 
 
 });
-
-$(document).ready(function(){
-  var cookieName = 'seen_banner',
-        bannerId = 'cookie-banner',
-       policyCls = 'cookie-banner-policy',
-  bannerCloseCls = 'cookie-banner-close',
-$seenBannerCookie = $.cookie(cookieName);
-
-  var trackPolicy = function(){
-    dcsMultiTrack("DCSext.CookieBanner", "ViewPolicy", "WT.dl", "121");
-  };
-
-  var closeBanner = function(){
-    $('#' + bannerId).slideUp();
-    dcsMultiTrack("DCSext.CookieBanner","Dismiss", "WT.dl", "121");
-  };
-
-  var htmlContent = '<div id="' + bannerId + '"><div class="cookie-text clear"><p>NHS Choices uses cookies to improve your on-site experience. <a class="' + policyCls + '" href="http://www.nhs.uk/aboutNHSChoices/aboutnhschoices/termsandconditions/Pages/cookies-policy.aspx" target="_blank">Find out more about cookies</a></p><p class="' + bannerCloseCls + '"><a href="#"><img src="/img/notifications/icon-close-das.gif"/></a></p></div></div>';
-
-  if (!$seenBannerCookie) {
-    $.cookie(cookieName, true, { expires: 90, path: '/'});
-    $('body').prepend(htmlContent);
-    $('.' + policyCls).on('click', trackPolicy);
-    $('.' + bannerCloseCls + ' a').on('click', closeBanner);
-  }
-});
