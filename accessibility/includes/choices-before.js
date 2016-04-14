@@ -3028,33 +3028,7 @@ jQuery(document).ready(function($) {
             }
                     
           }
-
-          // Add aria labels and roles and keyboard navigation
-          if ($('h2.showmore').length) {
-            var count = 1;
-            $('h2.showmore').each(function () {
-              $(this).wrapInner('<span role="button" tabIndex="0" id="button' + count + '" aria-controls="region' + count + '"></span>');
-              $(this).next('.col').attr({'role': 'region', 'id': 'region' + count, 'aria-labelledby': 'button' + count, 'aria-expanded': 'false', 'aria-hidden': 'true'});
-              count++
-            
-              $(this).click(function () {
-                $(this).wrapInner('<span role="button" tabIndex="0" id="button' + count + '" aria-controls="region' + count + '"></span>');
-                if ($(this).hasClass("hide")) {
-                  $(this).next('.col').attr({'aria-expanded': 'true', 'aria-hidden': 'false'});
-                } else {
-                  $(this).next('.col').attr({'aria-expanded': 'false', 'aria-hidden': 'true'});
-                }
-              });
-
-              $(this).keydown(function(e) {
-                if (e.which === 13 || e.which === 32) { // pressing enter or space bar
-                  e.preventDefault();
-                  $(this).click();
-                }
-                $(this).find('span').focus();
-              });
-            })
-          }
+          
         }
 
         function fFooter() {
@@ -3070,17 +3044,6 @@ jQuery(document).ready(function($) {
         
           var number = 1;
           
-          $(footerHeaders).each(function() {
-
-            var idHeader = "tab" + number;
-            var ariaControlsName = "panel" + number;
-
-            $(this).attr({ "role": "tab", "id": idHeader, "aria-controls": ariaControlsName, "aria-selected": 'false', "aria-expanded": 'false', "tabindex": 0 });
-            $(this).next("ul").attr({ "role": "tabpanel", "id": ariaControlsName, "aria-hidden": 'true', "aria-labelledby": idHeader });
-            $(this).parent().find('a').attr('tabIndex', -1);
-            number++;
-          });
-
           $(".footer-tab-content h2.show").click(function() {
             $(this).toggleClass("hide");
             $(this).next("ul.info").toggleClass("hidden");
